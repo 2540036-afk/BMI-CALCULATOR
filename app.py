@@ -1,8 +1,9 @@
 import streamlit as st
 
 # ---------- BMI Calculation Function ----------
-def calculate_bmi(weight, height):
-    return weight / (height ** 2)
+def calculate_bmi(weight, height_cm):
+    height_m = height_cm / 100  # Convert cm to meters
+    return weight / (height_m ** 2)
 
 # ---------- Streamlit UI ----------
 st.title("BMI Calculator")
@@ -10,14 +11,14 @@ st.write("Calculate your Body Mass Index easily")
 
 # User Inputs
 weight = st.number_input("Enter your weight (kg)", min_value=0.0, format="%.2f")
-height = st.number_input("Enter your height (meters)", min_value=0.0, format="%.2f")
+height_cm = st.number_input("Enter your height (cm)", min_value=0.0, format="%.2f")
 
 # Button
 if st.button("Calculate BMI"):
-    if weight <= 0 or height <= 0:
+    if weight <= 0 or height_cm <= 0:
         st.error("Please enter valid positive values for weight and height.")
     else:
-        bmi = calculate_bmi(weight, height)
+        bmi = calculate_bmi(weight, height_cm)
         st.success(f"Your BMI is: {bmi:.2f}")
 
         # BMI Category
@@ -29,3 +30,4 @@ if st.button("Calculate BMI"):
             st.warning("Category: Overweight")
         else:
             st.error("Category: Obese")
+
