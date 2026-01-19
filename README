@@ -1,0 +1,49 @@
+# BMI Calculator Application Using Python and Streamlit
+
+## 📌 Project Overview
+The BMI (Body Mass Index) Calculator is a web-based application developed using Python and Streamlit.  
+It allows users to calculate their BMI by entering their weight and height. The application provides instant results along with BMI category classification.
+
+This project demonstrates the use of Python programming, modular design, input validation, and an interactive Streamlit-based user interface.
+
+---
+
+## 🎯 Objectives
+- To design an interactive web-based BMI calculator
+- To apply Python functions for backend calculations
+- To implement Streamlit for frontend user interaction
+- To ensure proper input validation and error handling
+
+---
+
+## 🛠️ Technologies Used
+- **Python 3**
+- **Streamlit**
+- **VS Code / Any Python IDE**
+
+---
+
+## 📐 BMI Formula
+\[
+BMI = \frac{Weight\ (kg)}{Height\ (m)^2}
+\]
+
+---
+
+## ✅ Features
+- User-friendly interface
+- Input validation for height and weight
+- Accurate BMI calculation
+- BMI category display (Underweight, Normal, Overweight, Obese)
+- Real-time result update
+
+---
+
+## 🧩 Project Structure
+
+---
+
+## ▶️ How to Run the Application
+1. Install Streamlit:
+```bash
+pip install streamlit
